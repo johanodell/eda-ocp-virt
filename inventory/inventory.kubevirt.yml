@@ -1,9 +1,7 @@
 plugin: kubevirt.core.kubevirt
 connections:
 - namespaces:
-  - 00-infra-vms
-  - 00-monolith-demo
   - kubevirt-gitops
-  api_key: 
+  api_key: <your api key>  
   create_groups: true
   #host_format: name
