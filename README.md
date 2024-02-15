@@ -8,7 +8,8 @@ workflow of the demo in the diagram below.
 ![Alt text](eda-demo.png?raw=true "EDA Demo")
 
 Technologies used: 
-OpenShift-Virtualization
-OpenShift-GitOps (ArgoCD)
-Ansible Automation Platform Operator in OCP.
+* OpenShift-Virtualization
+* OpenShift-GitOps (ArgoCD)
+* Ansible Automation Platform Operator in OCP.
+* EDA k8s source plugin: https://github.com/sabre1041/sabre1041.eda/tree/main
  
