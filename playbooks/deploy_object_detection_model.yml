@@ -1,0 +1,44 @@
+---
+- name: Deploy object detection model 
+  hosts: "{{ vm_name }}"
+  become: true
+
+  tasks:
+    - name: Register VM with Red Hat subscription
+      redhat_subscription:
+        state: present
+        username: "{{ rhsm_username }}" 
+        password: "{{ rhsm_password }}"
+        consumer_name: "{{ vm_name }}"
+        auto_attach: true
+        force_register: yes
+         
+    - name: Ensure required packages are present
+      ansible.builtin.dnf: 
+        name: "{{ item }}"
+        state: latest
+      loop: 
+        - firewalld
+        - httpd
+        - git
+
+    - name: Deploy object detection model
+      ansible.builtin.git: 
+        repo: https://github.com/johanodell/object_detection.git 
+        dest: /var/www/html/
+
+    - name: Ensure required services are started and enabled  
+      ansible.builtin.service: 
+        name: "{{ item }}"
+        state: started
+        enabled: true
+      loop: 
+        - firewalld
+        - httpd
+
+    - name: Ensure web traffic is allowed in fw
+      ansible.posix.firewalld: 
+        service: http
+        state: enabled
+        immediate: yes
+        permanent: yes
