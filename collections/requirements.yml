@@ -1,0 +1,7 @@
+---
+collections:
+  - name: kubevirt.core
+    src: https://galaxy.ansible.com
+   
+  - name: kubernetes.core
+    src: https://galaxy.ansible.com 
