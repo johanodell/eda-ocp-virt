@@ -1,7 +1,19 @@
 ---
 collections:
+  # Used in ansible execution environment for tasks and inventory
   - name: kubevirt.core
     src: https://galaxy.ansible.com
    
   - name: kubernetes.core
-    src: https://galaxy.ansible.com 
+    src: https://galaxy.ansible.com
+
+  # Used in EDA decicion environemt in EDA Controller
+  - name: sabre1041.eda
+    src: https://galaxy.ansible.com
+
+# If you don't want to build your own EE's or DE's see below.
+# Execution Environment i used can be found here:
+# https://quay.io/repository/codell/ee_kubevirt
+
+# Descision Environment used can be found here:
+# https://quay.io/repository/codell/ocp.eda
