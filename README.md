@@ -8,8 +8,9 @@ of the demo in the diagram below.
 
 ![Alt text](eda-demo.png?raw=true "EDA Demo")
 
-# tl:dr 
-Deploy VM with GitOps, postconfig VM with apps by eventdriven 
+tl:dr
+ 
+deploy VM with GitOps, postconfig VM with apps by eventdriven 
 ansible in combination with labels. 
 
 As a developer you can deploy a standard "dumb" VM into 
