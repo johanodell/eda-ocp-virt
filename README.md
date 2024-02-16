@@ -16,7 +16,7 @@ in this demo reacts when VMIs (VirtualMachineInstance) pops up
 in a specific namespace (as a result of a git push/merge). It will 
 tell Ansible to execute a job.That job will be executed against 
 all hosts in the group label_app_techupdate which will be created 
-by the kubevirt_inventory_plugin which is configured to create 
+by the kubevirt_inventory_plugin. It is configured to create 
 groups based on labels for example. 
 
 Technologies used: 
