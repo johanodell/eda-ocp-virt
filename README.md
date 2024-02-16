@@ -13,7 +13,7 @@ tl:dr
 deploy VM with GitOps, postconfig VM with apps by eventdriven 
 ansible in combination with labels. 
 
-description
+Description:
 
 As a developer you can deploy a standard "dumb" VM into 
 OpenShift-Virtualization by using git. To configure and 
