@@ -8,8 +8,18 @@ of the demo in the diagram below.
 
 ![Alt text](eda-demo.png?raw=true "EDA Demo")
 
+As a developer you can deploy a standard "dumb" VM into 
+OpenShift-Virtualization by using git. To configure and 
+add functionality/apps you need in the VM, you can trigger
+Ansible playbooks by using an EDA event source which 
+in this demo reacts when VMIs (VirtualMachineInstance) pops up 
+in a specific namespace. It will tell Ansible to execute a job.
+That job will be executed against all hosts in the group 
+label_app_techupdate which will be created by the 
+kubevirt_inventory_plugin which is configured to create 
+groups based on labels for example. 
+
 Technologies used: 
 * OpenShift-Virtualization
 * OpenShift-GitOps (ArgoCD)
 * Ansible Automation Platform Operator in OCP.
-* EDA k8s source plugin: https://github.com/sabre1041/sabre1041.eda/tree/main
