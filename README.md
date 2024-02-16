@@ -8,7 +8,7 @@ of the demo in the diagram below.
 
 ![Alt text](eda-demo.png?raw=true "EDA Demo")
 
-tl:dr 
+# tl:dr 
 Deploy VM with GitOps, postconfig VM with apps by eventdriven 
 ansible in combination with labels. 
 
